@@ -1,6 +1,6 @@
 ---
 name: brainstorm
-description: Always use before any creative work - creating features, building components, adding functionality or modifying behaviour. Explore user intent, requirements and design before implementation.
+description: Always use before any creative work - creating features, building components, adding functionality or modifying behaviour. Explore user intent, requirements and design before implementation
 ---
 
 # Brainstorm
