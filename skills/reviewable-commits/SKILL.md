@@ -85,7 +85,7 @@ reviewable by a human reviewer.
 - **Always use Conventional Commits**
 
 Show the plan to your human partner before continuing and ask whether to
-continue, or whether changes are needed.
+continue.
 
 **DO NOT CHANGE ANY COMMITS UNTIL THE HUMAN HAS APPROVED.**
 
@@ -94,12 +94,21 @@ continue, or whether changes are needed.
 If the human has approved of the plan to restructure the current branch's Git
 commit history, execute on it.
 
-**Stop here** and ask the human to review the commit history. If it looks good,
+## Step 7: Final check
+
+Check if there are any differences between the restructured branch and the
+backup branch.
+
+If there are **ANY** differences between these branches, ask the user if you
+should retry (yes/no). If the user approves, go back to **Step 6**.
+
+If there are **NO** differences between the restructured and backup branches,
+**STOP HERE** and ask the human to review the commit history. If it looks good,
 ask: "Should I delete the backup branch?" (yes/no)
 
-### Step 7: Delete the backup branch if approved
+### Step 8: Delete the backup branch if approved
 
-If the human approved deleting the backup branch (from step 6), delete it.
+If the human approved deleting the backup branch (from step 7), delete it.
 
 ```bash
 # Delete the backup branch we created.
