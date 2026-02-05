@@ -14,7 +14,23 @@ reviewable by humans, one commit at a time.
 
 ## The Process
 
-### Step 1: Check which branch we are on
+### Step 1: Safety Checks
+
+**Step 1.1: Check for uncommitted changes**
+
+First check whether there are any uncommitted changes on the current branch.
+
+```bash
+# Check for uncommitted, unstaged changes.
+git diff --stat
+# Check for uncommitted staged changes.
+git diff --staged --stat
+```
+
+If there are **ANY** uncommitted changes. Stop immediately and say: "I can't
+apply this skill when there are uncommitted changes on the current branch."
+
+**Step 1.2: Check which branch we're on**
 
 ```bash
 # Get the current branch name, store it in BRANCH_NAME.
