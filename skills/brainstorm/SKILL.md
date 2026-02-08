@@ -9,7 +9,7 @@ description: Always use before any creative work - creating features, building c
 
 Help turn ideas into fully formed designs and plans through natural collaborative dialogue.
 
-Start by understanding the current project context (use `spelunk`), then ask questions one at a time to refine the idea. Once you understand what you're building, present the design in small sections (200-300 words), checking after each section whether it looks right so far.
+Start by understanding the current project context (use `/spelunk`), then ask questions one at a time to refine the idea. Once you understand what you're building, present the design in small sections (200-300 words), checking after each section whether it looks right so far.
 
 **Announce at start:** "Let's brainstorm this together."
 
@@ -17,8 +17,8 @@ Start by understanding the current project context (use `spelunk`), then ask que
 
 **Understanding the idea:**
 
-- If there is spelunk documentation (`docs/spelunk/`), load the `spelunk` skill and use those docs to understand the project
-- If there is no spelunk documentation, use the `spelunk` skill to check out the current project state first (files, docs)
+- If there is spelunk documentation (`docs/spelunk/`), `/spelunk` and use those docs to understand the project
+- If there is no spelunk documentation, use `/spelunk` to check out the current project state first (files, docs)
 - Ask questions one at a time to refine the idea
 - Prefer multiple choice questions when possible, but open-ended is fine too
 - Only one question per message - if a topic needs more exploration, break it into multiple questions
@@ -29,6 +29,7 @@ Start by understanding the current project context (use `spelunk`), then ask que
 - Propose 2-3 different approaches with trade-offs
 - Present options conversationally with your recommendation and reasoning
 - Lead with your recommended option and explain why
+- Recommend testing approaches (use `/tdd`)
 
 **Presenting the design:**
 
@@ -47,10 +48,11 @@ Start by understanding the current project context (use `spelunk`), then ask que
 **Implementation (if continuing):**
 
 - Ask: "Ready to implement?"
+- If user is ready to implement, use `/implement-plan`
 
 ## Key Principles
 
-- **ALWAYS `spelunk` TO UNDERSTAND CURRENT PROJECT CONTEXT**
+- **ALWAYS `/spelunk` TO UNDERSTAND CURRENT PROJECT CONTEXT**
 - **NEVER ASK TO IMPLEMENT BEFORE WRITING THE PLAN**
 - **One question at a time** - Don't overwhelm with multiple questions
 - **Multiple choice preferred** - Easier to answer than open-ended when possible
