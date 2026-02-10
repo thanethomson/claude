@@ -37,8 +37,8 @@ apply this skill when there are uncommitted changes on the current branch."
 BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
 ```
 
-If we are on `main`/`master`, stop immediately and say: "I can't apply this
-skill to the default branch."
+If we are on `main`, stop immediately and say: "I can't apply this skill to the
+default branch."
 
 ### Step 2: Make a backup of the current branch
 
