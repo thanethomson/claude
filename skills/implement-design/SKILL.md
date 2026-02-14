@@ -23,7 +23,11 @@ Turn designs created through `/brainstorm` into working code.
    3. After a task is complete, stop and wait for review from your human
       partner.
 
+**AFTER EACH TASK IS IMPLEMENTED:** Ask yourself, am I continuing without
+review from my human partner? If so, **STOP** and ask for review.
+
 ## Principles
 
-- Ask questions if anything is unclear.
 - Human-in-the-loop review after each task.
+- Ask questions if anything is unclear.
+- Each task implemented using a **SEPARATE** sub-agent.
