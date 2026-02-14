@@ -30,4 +30,3 @@ review from my human partner? If so, **STOP** and ask for review.
 
 - Human-in-the-loop review after each task.
 - Ask questions if anything is unclear.
-- Each task implemented using a **SEPARATE** sub-agent.
