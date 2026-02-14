@@ -48,7 +48,7 @@ Start by understanding the current project context (use `/spelunk`), then ask qu
 **Implementation (if continuing):**
 
 - Ask: "Ready to implement?"
-- If user is ready to implement, use `/implement-plan`
+- If user is ready to implement, use `/implement-design`
 
 ## Key Principles
 
