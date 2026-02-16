@@ -13,7 +13,7 @@ Turn designs created through `/brainstorm` into working code.
 
 ## The Process
 
-1. **ALWAYS** start with fresh context.
+1. **ALWAYS** start by clearing context.
 2. Read and understand the plan.
 3. Break the plan down into actionable, reasonably-sized tasks.
 4. For each task, launch a sub-agent to execute on it.
