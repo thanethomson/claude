@@ -5,7 +5,10 @@ description: Use when exploring a codebase to generate persistent documentation 
 
 # Spelunk - Persistent Codebase Exploration
 
-Spelunk is a system for deep, targeted codebase exploration that produces persistent, reusable documentation. Instead of each agent re-reading the same files, spelunk docs are generated once and reused until the underlying code changes.
+Spelunk is a system for deep, targeted codebase exploration that produces
+persistent, reusable documentation. Instead of each agent re-reading the same
+files, spelunk docs are generated once and reused until the underlying code
+changes.
 
 ## Core Concept
 
@@ -21,10 +24,10 @@ Agent needs to understand code area
 
 ```
 docs/spelunk/
-  ├── contracts/          # Type definitions, API signatures (for Architect, QA)
-  ├── flows/              # User flows, entry points (for Product)
-  ├── boundaries/         # Module edges, dependencies (for Architect)
-  ├── trust-zones/        # Auth boundaries, data flow (for Security)
+  ├── contracts/          # Type definitions, API signatures
+  ├── flows/              # User flows, entry points
+  ├── boundaries/         # Module edges, dependencies
+  ├── trust-zones/        # Auth boundaries, data flow
   ├── _index.md           # Human-readable navigation index
   └── _staleness.json     # Machine-readable staleness tracking
 ```
@@ -67,23 +70,21 @@ sha256sum src/auth/login.ts | cut -c1-8
 ## Spelunk Command Syntax
 
 ```
-spelunk --for=<agent-type> --focus="<area description>"
+spelunk
 
 Options:
-  --for       Target agent lens: architect, product, qa, security
-  --focus     Natural language description of exploration area
   --check     Only check staleness, don't re-explore
   --force     Re-explore even if FRESH
 ```
 
 ## Lens-to-Content Mapping
 
-| Lens | `--for` | What to Document |
-|------|---------|-----------------|
-| `contracts/` | architect, qa | Type definitions, interface signatures, API request/response shapes, validation schemas |
-| `flows/` | product | User-facing entry points, request flows, state transitions, UI interaction paths |
-| `boundaries/` | architect | Module import/export maps, dependency directions, coupling analysis |
-| `trust-zones/` | security | Auth checks, data sanitization points, privilege boundaries |
+| Lens | What to Document |
+|------|------------------|
+| `contracts/` | Type definitions, interface signatures, API request/response shapes, validation schemas |
+| `flows/` | User-facing entry points, request flows, state transitions, UI interaction paths |
+| `boundaries/` | Module import/export maps, dependency directions, coupling analysis |
+| `trust-zones/` |  Auth checks, data sanitization points, privilege boundaries |
 
 ## Document Format
 
@@ -140,7 +141,9 @@ Always prefer the fastest available tool:
    - Use for: string literals, comments, non-code files
 
 ### LSP Availability Check
-Attempt an LSP call first. If it fails, fall back to the next tier. Don't waste time checking availability - just try and fallback.
+
+Attempt an LSP call first. If it fails, fall back to the next tier. Don't waste
+time checking availability - just try and fallback.
 
 ## Pre-Spelunk Doc Check (Standard Protocol)
 
@@ -167,7 +170,5 @@ Before exploring any code area:
 
 ## File Naming Convention
 
-- Use kebab-case slugs derived from the `--focus` parameter
+- Use kebab-case slugs
 - Max 50 characters, truncated with hash suffix if longer
-- Example: `--focus="user authentication flow"` → `user-authentication-flow.md`
-- Example: `--focus="very long description of a complex module interaction pattern"` → `very-long-description-of-a-complex-modul-a3b4c5.md`
