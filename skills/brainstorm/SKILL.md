@@ -7,9 +7,14 @@ description: Always use before any creative work - creating features, building c
 
 ## Overview
 
-Help turn ideas into fully formed designs and plans through natural collaborative dialogue.
+Help turn ideas into fully formed designs and plans through natural
+collaborative dialogue.
 
-Start by understanding the current project context (use `/spelunk`), then ask questions one at a time to refine the idea. Once you understand what you're building, present the design in small sections (200-300 words), checking after each section whether it looks right so far.
+Start by understanding the current project context (use `/spelunk` if there is
+spelunk documentation in `docs/spelunk`), then ask questions one at a time to
+refine the idea. Once you understand what you're building, present the design
+in small sections (200-300 words), checking after each section whether it looks
+right so far.
 
 **Announce at start:** "Let's brainstorm this together."
 
@@ -17,11 +22,13 @@ Start by understanding the current project context (use `/spelunk`), then ask qu
 
 **Understanding the idea:**
 
-- If there is spelunk documentation (`docs/spelunk/`), `/spelunk` and use those docs to understand the project
-- If there is no spelunk documentation, use `/spelunk` to check out the current project state first (files, docs)
+- If there is spelunk documentation (`docs/spelunk`) and it's up-to-date, use
+  those docs to understand the project
+- If the spelunk documentation is out of date, ignore it
 - Ask questions one at a time to refine the idea
 - Prefer multiple choice questions when possible, but open-ended is fine too
-- Only one question per message - if a topic needs more exploration, break it into multiple questions
+- Only one question per message - if a topic needs more exploration, break it
+  into multiple questions
 - Focus on understanding: purpose, constraints, success criteria
 
 **Exploring approaches:**
@@ -52,7 +59,6 @@ Start by understanding the current project context (use `/spelunk`), then ask qu
 
 ## Key Principles
 
-- **ALWAYS `/spelunk` TO UNDERSTAND CURRENT PROJECT CONTEXT**
 - **NEVER ASK TO IMPLEMENT BEFORE WRITING THE PLAN**
 - **One question at a time** - Don't overwhelm with multiple questions
 - **Multiple choice preferred** - Easier to answer than open-ended when possible
@@ -60,4 +66,5 @@ Start by understanding the current project context (use `/spelunk`), then ask qu
 - **Explore alternatives** - Always propose 2-3 approaches before settling
 - **Incremental validation** - Present design in sections, validate each
 - **Be flexible** - Go back and clarify when something doesn't make sense
-- **Ignore Git history** - Don't bother inspecting Git commit history to build context
+- **Ignore Git history** - Don't bother inspecting Git commit history to build
+  context
